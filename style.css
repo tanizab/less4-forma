@@ -16,7 +16,7 @@ form {
 	margin-bottom: 20px;
 	gap: 10px;
 }
-input, textarea, button{
+input, textarea, button, select{
 	font-family: inherit;
 	font-size: inherit;
 	outline: none;
