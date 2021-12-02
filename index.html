@@ -6,36 +6,42 @@
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-    <h2>Форма обратной связи</h2>
-    <form method="post" id="contactForm">
-        <div class="form-group">
-            <label for="type">Предмет сообщения</label>
-            <select name="type" id="type"></select>
-        </div>
-       <!--  div.form-group*4>label+input -->
-       <div class="form-group">
-            <label for="last_name">Фамилия</label>
-            <input type="text" id="last_name" name="last_name"></div>
-       <div class="form-group">
-            <label for="first_name">Имя</label>
-            <input type="text" id="first_name" name="first_name"></div>
-       <div class="form-group">
-            <label for="second_name">Отчество</label>
-            <input type="text" id="second_name" name="second_name"></div>
-        <!-- .form-group>label+textarea -->
-        <div class="form-group">
-            <label for="message">Комментарий</label>
-            <textarea name="message" id="message"></textarea>
-        </div>
-        <div class="form-group">
-            <label for="tel">Телефон</label>
-            <input type="tel" id="tel" name="tel">
-        </div>
-        <div class="form-group">
-            <!-- <button type="button" onclick="sendForm(this)">Отправить</button> -->
-            <button type="submit">Отправить</button>
-        </div>
-    </form>
+    <div>
+        <h2>Форма обратной связи</h2>
+        <form method="post" id="contactForm">
+            <div class="form-group">
+                <label for="type">Предмет сообщения</label>
+                <select name="type" id="type"></select>
+            </div>
+           <!--  div.form-group*4>label+input -->
+           <div class="form-group">
+                <label for="last_name">Фамилия</label>
+                <input type="text" id="last_name" name="last_name"></div>
+           <div class="form-group">
+                <label for="first_name">Имя</label>
+                <input type="text" id="first_name" name="first_name"></div>
+           <div class="form-group">
+                <label for="second_name">Отчество</label>
+                <input type="text" id="second_name" name="second_name"></div>
+            <!-- .form-group>label+textarea -->
+            <div class="form-group">
+                <label for="message">Комментарий</label>
+                <textarea name="message" id="message"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="tel">Телефон</label>
+                <input type="tel" id="tel" name="tel">
+            </div>
+            <div class="form-group">
+                <!-- <button type="button" onclick="sendForm(this)">Отправить</button> -->
+                <button type="submit">Отправить</button>
+            </div>
+        </form>
+    </div>
+    <div class="info">
+        <h2>Результат</h2>
+        <div class="result"></div>
+    </div>
     <script src="script.js"></script>
 </body>
 </html>

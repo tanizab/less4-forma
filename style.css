@@ -1,6 +1,11 @@
 body {
 	margin: 0;
 	font: 20px sans-serif;
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	padding: 0 50px;
+	gap: 50px;
+
 }
 h2 {
 	text-align: center;
@@ -8,7 +13,8 @@ h2 {
 form {
 	/*background: red;*/
 	width: 400px;
-	margin: 0 auto;
+	/*margin: 0 auto;*/
+	grid-column: 2/3;
 }
 .form-group {
 	display: flex;
@@ -36,3 +42,4 @@ button {
 .form-group:last-child {
 	align-items: flex-end;
 }
+

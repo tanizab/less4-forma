@@ -12,18 +12,18 @@ console.log(caption);
 //let form = caption.nextElementSibling;
 
 let forms = document.forms[0];
-console.log(forms);
+//console.log(forms);
 
 //let contactForm = document.forms["contact-Form"]
 const contactForm = document.forms.contactForm;
-console.log(contactForm.id);
-console.log(contactForm.method);
-console.log(contactForm.elements); //покажет те элементы формы котор отправляются на сервер
+//console.log(contactForm.id);
+//console.log(contactForm.method);
+//console.log(contactForm.elements); //покажет те элементы формы котор отправляются на сервер
 
 
 const sendForm = function(e) { //e - событие
 	e.preventDefault(); //удалить событие которое было на этом теге по умолчанию (в нашем случает type=submit больше не будет перезагружать таблицу как следствие форма больше никуда не отправится).
-	console.log(e);
+	//console.log(e);
 	let data = {};
 	for(let i = 0; i < contactForm.elements.length; i++){
 
@@ -39,7 +39,22 @@ const sendForm = function(e) { //e - событие
 }
 
 let sub = contactForm.elements[contactForm.elements.length - 1];
-console.log("Кнопка", sub);
+//console.log("Кнопка", sub);
 
 sub.onclick = sendForm;
+
+let select = contactForm.elements[0];
+let types = ["Сервис", "Консультация", "Ошибка", "Другое"];
+
+
+for(let type of types) {
+	let opt = new Option(type);
+	//console.log(opt);
+
+	//select.add(opt);
+	select.add(opt, select[0]);
+
+	select[0].selected = true;
+}
+
 
