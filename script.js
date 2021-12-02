@@ -19,11 +19,13 @@ const contactForm = document.forms.contactForm;
 //console.log(contactForm.id);
 //console.log(contactForm.method);
 //console.log(contactForm.elements); //покажет те элементы формы котор отправляются на сервер
-
+let resultBlock = document.body.lastElementChild.previousElementSibling.lastElementChild;
+console.log(resultBlock);
 
 const sendForm = function(e) { //e - событие
 	e.preventDefault(); //удалить событие которое было на этом теге по умолчанию (в нашем случает type=submit больше не будет перезагружать таблицу как следствие форма больше никуда не отправится).
 	//console.log(e);
+
 	let data = {};
 	for(let i = 0; i < contactForm.elements.length; i++){
 
@@ -36,6 +38,17 @@ const sendForm = function(e) { //e - событие
 		}
 	}
 	console.log(data);
+
+	let table = `<table>`;
+		for(let k in data){
+			table += "<tr>";
+			table += `<th>${k}</th>`;
+			table += `<td>${data[k]}</td>`;
+			table += "</tr>";
+		}
+		table += `</table>`;
+		resultBlock.innerHTML = table;
+		contactForm.reset();
 }
 
 let sub = contactForm.elements[contactForm.elements.length - 1];
@@ -56,5 +69,9 @@ for(let type of types) {
 
 	select[0].selected = true;
 }
+
+/*let resultBlock = document.body.lastElementChild.previousElementSibling.lastElementChild;
+console.log(resultBlock);*/
+
 
 
